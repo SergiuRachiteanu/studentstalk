@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Students Talk</title>
+
+    <meta name="description" content="Source code generated using layoutit.com">
+    <meta name="author" content="LayoutIt!">
+
+    <link href="static/users/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type='text/css' href="{% static 'users/style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
+
+  </head>
+  <body>
+    {% load static %}
+    <div class="navbar" style="box-shadow:none;">
+        <div style="float:left;margin-left:40px;margin-top:13px;">Students Talk</div>
+        <div style="float:right;margin-right:50px;padding-bottom:10px;">
+            <button type="submit" class="enterchatbutton" style="background:#cc14c2;width:150px;margin-top:20px;"><a style="color:white;" href="{% url 'logoutView' %}">DISCONNECT</a></button>
+        </div>
+        <div style="float:right;font-size:25px;margin-top:22px;">@{{ user.get_username }}</div>
+    </div>
+
+    <div class="login" style="background-image: url({% static 'users/mov.jpg' %})">
+    {% load static %}
+        <div class="box-main" style="padding-top:0px;padding-left:0px;padding-right:0px;">
+          {% for canal in context %}
+            <div class="chat-header" style="height:70px;text-align:center;font-size:40px;"> 
+                {{canal.facultate}}   
+            </div>
+          {% endfor %}
+            <div class="row">
+                
+            </div>
+        </div>
+    </div>
+  </body>
+</html>

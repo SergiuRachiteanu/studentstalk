@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Students Talk</title>
+
+    <meta name="description" content="Source code generated using layoutit.com">
+    <meta name="author" content="LayoutIt!">
+
+    <link href="static/users/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type='text/css' href="{% static 'users/style.css' %}">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
+
+  </head>
+  <body>
+	<div class="limiter"> 
+		<div class="login" style="background-image: url({% static 'users/mov.jpg' %})">
+			<div class="box-shadow">
+				<p class="bigtext">Welcome</p>
+				<form method="POST">
+					{% csrf_token %}
+
+  					<label for="username">User Name:</label><br>
+  					<input type="text" name="username" placeholder="username" class="inputbox" required><br><br><br>
+					  
+  					<label for="password">Password:</label><br>
+  					<input type="password" name="password" placeholder="password" class="inputbox" required><br><br>
+
+					<div class="vertical-center">	
+						<center><button type="submit" class="loginbutton">LOGIN</button></center>	
+					</div>
+					{% if messages %}
+					{% for msg in messages %}
+						<div style="font-size: 20px; color: red;text-align:center;margin-top:50px;">{{msg}}</div>
+					{% endfor %}
+					{%endif%}
+					<div style="margin-top: 4cm; font-size: 16px; text-align: center;">
+					<p>Don't have an account? <a href="{% url 'register' %}">Sign Up</a></p>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+  </body>
+</html>
