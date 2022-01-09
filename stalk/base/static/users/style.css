@@ -1,0 +1,292 @@
+body {
+    display: block;
+    margin: 0px;
+    font-family: 'DM Sans', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'DM Sans', sans-serif;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+    border-color: #b721ff;
+    font-family: 'DM Sans', sans-serif;
+}
+
+a:link {
+    text-decoration: none;
+    font-family: 'DM Sans', sans-serif;
+} 
+
+
+.limiter {
+    width: 100%;
+    margin: 0 auto;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.login {
+    width: 100%;
+    min-height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: #f2f2f2;
+    background-image: url("studentstalk\\users\\static\\users\\mov.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-size: 100% 100%;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.box-shadow {
+    width: 390px;
+    margin-top: 15px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 77px 55px 33px 55px;
+    box-shadow: 0 5px 10px 0px rgb(0 0 0 / 10%);
+    -moz-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 5px 10px 0px rgb(0 0 0 / 10%);
+    font-family: 'DM Sans', sans-serif;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.box-main{
+    background: #f2f2f2;
+    opacity: 85%;
+    width: 1200px;
+    height: 800px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    padding: 77px 55px 33px 55px;
+    box-shadow: 0 5px 10px 0px rgb(0 0 0 / 10%);
+    -moz-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 5px 10px 0px rgb(0 0 0 / 10%);
+    overflow: scroll;
+    display: grid;
+    grid-column-gap: 50px;
+    font-family: 'DM Sans', sans-serif;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 300px;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+.channels {
+    background: white;
+    opacity: 100%;
+    width: 500px;
+    height: 200px;
+    margin-left: 30px;
+    margin-top: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 10px 0px rgb(0 0 0 / 10%);
+    border: 1px solid gray;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.channels-header {
+    background: #b721ff;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+    padding-top: 5px;
+    padding-left: 15px;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.bigtext {
+    font-size: 20px;
+    font-weight: 650;
+    text-align: center;
+    padding-bottom: 30px;
+    font-size: 35px;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.inputbox {
+    border-top: white;
+    border-left: white;
+    border-right: white;
+    border-color: #a2a2a2;
+    width: 100%;
+    font-family: 'DM Sans', sans-serif;
+}
+  
+.vertical-center {
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+.loginbutton {
+    height: 50px;
+    font-size: 20px;
+    color: white;
+    background: -webkit-linear-gradient(right, #21d4fd, #b721ff);
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 25px;
+    border: none;
+    width: 100%;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.loginbutton:hover {
+    opacity: 50%;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.enterchatbutton {
+    height: 40px;
+    font-size: 20px;
+    color: white;
+    background: #cc14c2;
+    align-items: center;
+    margin-left: 50px;
+    border: none;
+    width: 100px;
+    border-radius: 25px;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.enterchatbutton:hover {
+    opacity: 50%;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.text-canal {
+    padding-left:20px;
+    font-size:25px;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.dropdown {
+    margin-left: 30px;
+    margin-top: 15px;
+    width: 50%;
+    height: 30px;
+    background: white;
+    color: gray;
+    font-size: 20px;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.navbar {
+    text-align: center;
+    width: 100%;
+    background: -webkit-linear-gradient(right,#b721ff, #ca20f5);
+    font-size: 35px;
+    color: white;
+    box-shadow: #fff;
+    opacity: 100%;
+    font-family: 'DM Sans', sans-serif;
+    display: inline-block;
+}
+
+.chat-box {
+    background: #e4dcdc;
+    opacity: 100%;
+    width: 750px;
+    border-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0 5px 10px 0px rgb(0 0 0 / 10%);
+    border: 1px solid gray;
+    font-family: 'DM Sans', sans-serif;
+    display: grid;  
+}
+
+.chat-window {
+    background: white;
+    width: 90%;
+    height: 400px;
+    overflow: scroll;
+    overflow-x: hidden;
+    margin-left: 30px;
+    padding-bottom: 50px;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.chat-header {
+    width: 100%;
+    display: inline-block;
+    background: #b721ff;
+    height: 50px;
+    padding-top: 10px;
+    font-size: 20px;
+    color: white;
+    border-radius: 10px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.chat-text {
+    font-size: 28px;
+    color:#b721ff;
+    font-weight: 700;
+    font-family: 'DM Sans', sans-serif;
+    padding-left: 50px;
+    padding-top: 30px;
+}
+
+.chat-inputbox {
+    width: 70%;
+    height: 1cm;
+    margin: 20px 10px 20px 30px;    
+}
+
+.users-connected-box {
+    background: #e4dcdc;
+    opacity: 100%;
+    width: 300px;
+    height: 620px;
+    overflow: scroll;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    margin-left: 300px;
+    border-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0 5px 10px 0px rgb(0 0 0 / 10%);
+    border: 1px solid gray;
+    font-family: 'DM Sans', sans-serif;
+    display: grid; 
+}
+
+.back-button {
+    width: 30px;
+    height: 30px;
+    margin-left: 14px;
+    margin-right: 25px;
+}
+
+.back-button:hover {
+    opacity: 30%;
+}
+

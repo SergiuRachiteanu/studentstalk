@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Students Talk</title>
+
+    <meta name="description" content="Source code generated using layoutit.com">
+    <meta name="author" content="LayoutIt!">
+
+    <link href="static/users/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type='text/css' href="{% static 'users/style.css' %}">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
+
+  </head>
+  <body>
+  {%load static%}
+	<div class="limiter"> 
+		<div class="login" style="background-image: url({% static 'users/mov.jpg' %})">
+			<div class="box-shadow">
+				<p class="bigtext">Welcome</p>
+				<form method="POST">
+					{% csrf_token %}
+
+  					<label for="username">User Name:</label><br>
+  					<input type="text" name="username" placeholder="username" class="inputbox" required maxlength="30"><br><br>
+
+  					<label for="email">E-mail:</label><br>
+  					<input type="email" name="email" placeholder="e-mail" class="inputbox" required maxlength="50"><br><br>
+
+					<label for="password">Password:</label><br>
+  					<input type="password" name="password" placeholder="password" class="inputbox" required
+					  	onchange="form.repassword.pattern=this.value" maxlength="30"><br><br>
+
+					<label for="repassword">Confirm Password:</label><br>
+  					<input type="password" name="repassword" placeholder="confirm password" class="inputbox" pattern="" required><br><br>
+
+					<p>Select the faculty where you are studying:</p>
+					<select name="facultate" required>
+    					<option value="FMI">FMI</option>
+    					<option value="Fizica">Fizica</option>
+    					<option value="Drept">Drept</option>
+    					<option value="CBG">CBG</option>
+						<option value="FLIT">FLIT</option>
+						<option value="FSP">FSP</option>
+						<option value="PFC">PFC</option>
+						<option value="FMT">FMT</option>
+						<option value="FAD">FAD</option>
+						<option value="FEFS">FEFS</option>
+						<option value="FEAA">FEAA</option>
+  					</select><br><br>
+
+					<div class="vertical-center">	
+						<center><button type="submit" class="loginbutton">REGISTER</button></center>	
+					</div>
+
+					{% if messages %}
+					{% for msg in messages %}
+						<div style="font-size: 20px; color: red;text-align:center;margin-top:50px;">{{msg}}</div>
+					{% endfor %}
+					{%endif%}
+
+					<div style="margin-top: 1cm; font-size: 16px; text-align: center;">
+						<p>Already have an account? <a href="{% url 'login' %}">Sign In</a></p>
+					</div>
+					
+				</form>	
+			</div>
+		</div>
+	</div>
+  </body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Students Talk</title>
+
+    <meta name="description" content="Source code generated using layoutit.com">
+    <meta name="author" content="LayoutIt!">
+    
+    <link href="static/users/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type='text/css' href="{% static 'users/style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
+    <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+    </head>
+    <body>
+        {% load static %}
+        <div class="navbar" style="box-shadow:none;">
+            <div style="float:left;margin-left:40px;margin-top:13px;">Students Talk</div>
+            <div style="float:right;margin-right:50px;padding-bottom:10px;">
+                <button type="submit" class="enterchatbutton" style="background:#cc14c2;width:150px;margin-top:20px;"><a style="color:white;" href="{% url 'logoutView' %}">DISCONNECT</a></button>
+            </div>
+            <div style="float:right;font-size:25px;margin-top:22px;">@{{ user.get_username }}</div>
+        </div>
+        <div class="login" style="background-image: url({% static 'users/mov.jpg' %})">
+            <div class="box-main" style="background:none;width:90%;opacity:100%;">
+                <div class="row">
+                    <div class="column" style="padding-left:80px;padding-right:30px;">
+                        <h1 style="color:white">Edit your faculty.</h1>
+                        <p style="color:white; font-size:20px;">
+                            As we care so much about our users, we give every student the opportunity
+                            to change his faculty, in case something went wrong during the registration.
+                            An admin will review your request in a short amount of time, and you will get a response within 24 hours from
+                            your request. <br><br><br> !  !  ! Please be aware that in any moment an administrator can deny your request for some reasons
+                            he considers to do this. The admin is not responsible to inform you about the reasons he denied you. 
+                        </p>
+                    </div>
+                    <div class="column">
+                        <div class="chat-box" style="width:100%;">
+                            <div class="chat-header" style="padding-left:20px;padding-top:15px;">
+                                Update information form
+                            </div>
+                            <div style="margin-left:30px;margin-top:30px;font-size:20px;">
+                                <form method="POST">
+                                    {% csrf_token %}
+                                    <label for="reason">The reason you want to change the faculty:</label><br><br>
+                                    <textarea style="resize:none;" id="reason" name="reason" rows="7" cols="75" maxlength="1000" placeholder="maximum 1000 characters" required></textarea><br><br>
+                                    <label for="facultyselected">Select the faculty you want to switch to:</label><br>
+                                    <select name="facultyselected" required style="font-size:15px;">
+                                        <option value="FMI">Facultatea de Matematica si Informatica</option>
+                                        <option value="Fizica">Facultatea de Fizica</option>
+                                        <option value="Drept">Facultatea de Drept</option>
+                                        <option value="CBG">Facultatea de Chimie, Biologie si Geografie</option>
+                                        <option value="FLIT">Facultatea de Litere, Istorie si Teologie</option>
+                                        <option value="FSP">Facultatea de Sociologie si Psihologie</option>
+                                        <option value="PFC">Facultatea de Stiinte Politice si ale Comunicarii</option>
+                                        <option value="FMT">Facultatea de Muzica si Teatru</option>
+                                        <option value="FAD">Facultatea de Arte si Design</option>
+                                        <option value="FEFS">Facultatea de Educatie Fizica si Sport</option>
+                                        <option value="FEAA">Facultatea de Economie si Administrare a Afacerilor</option>
+                                    </select><br><br> 
+                                    <div style="margin-left:70px;margin-bottom:20px;">          
+                                        <input type="submit" id="submitupdates" class="enterchatbutton" style="background:#cc14c2;width:300px;" value="SUBMIT CHANGES">	  
+                                    </div>
+                                </form>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
